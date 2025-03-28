@@ -1,0 +1,19 @@
+.api__page {
+  @apply flex flex-col gap-y-2 w-11/12 mx-auto py-6;
+
+  .one__field {
+    @apply flex justify-between items-start w-64 gap-x-3;
+  }
+  
+  input {
+    @apply flex py-1 px-2 w-3/5 bg-black bg-opacity-25 rounded-xl;
+  }
+
+  .tons_desc__info {
+    @apply flex flex-col gap-y-3 mt-12;
+    
+    .tons, .description {
+      @apply flex flex-col gap-y-2;
+    }
+  }
+}
