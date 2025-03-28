@@ -36,17 +36,69 @@ const AuthPage = () => {
   }, [userInfo])
 
   return (
+    // <div className="flex flex-col items-center w-full my-12">
+    //   <form className="flex flex-col items-center w-1/2 gap-y-12 py-6 px-4 bg-[#dddada] rounded-xl">
+    //     <h1 className="font-bold text-3xl leading-10">Авторизация</h1>
+    //     <div className="flex flex-col mb-24">
+    //       <InputField type="email" name="email" title="Введите ваш email" placeholder="Введите ваш email" setState={(e) => setEmail(e.target.value)} state={email} className="mb-4" isImportant={true} />
+    //       <InputField type="password" name="password" title="Введите ваш пароль" placeholder="Введите ваш пароль" setState={(e) => setPassword(e.target.value)} state={password} className="mb-4" isImportant={true} />
+    //       <InputField type="password" name="confirmpassword" title="Подтвердите ваш пароль" placeholder="Подтвердите ваш пароль" setState={(e) => setConfirmPassword(e.target.value)} state={confirmpassword} className="mb-4" isImportant={true} />
+    //     </div>
+    //     <div className="flex flex-col gap-y-2 w-3/5">
+    //       <CustomButton clickFn={handleLogin} title="Вход" className="bg-[#43BE65] w-full h-10 hover:text-[#43BE65] hover:bg-white border-2"/>
+    //       <button onClick={() => router.push('/registration')} type="button" className="transition-all duration-300 hover:opacity-60 font-normal text-sm">Нет аккаунта?</button>
+    //     </div>
+    //   </form>
+    // </div>
     <div className="flex flex-col items-center w-full my-12">
-      <form className="flex flex-col items-center w-1/2 gap-y-12 py-6 px-4 bg-[#dddada] rounded-xl">
+      <form className="flex flex-col items-center w-1/3 gap-y-6 py-8 px-6 bg-gray-200 rounded-xl shadow-md">
         <h1 className="font-bold text-3xl leading-10">Авторизация</h1>
-        <div className="flex flex-col mb-24">
-          <InputField type="email" name="email" title="Введите ваш email" placeholder="Введите ваш email" setState={(e) => setEmail(e.target.value)} state={email} className="mb-4" isImportant={true} />
-          <InputField type="password" name="password" title="Введите ваш пароль" placeholder="Введите ваш пароль" setState={(e) => setPassword(e.target.value)} state={password} className="mb-4" isImportant={true} />
-          <InputField type="password" name="confirmpassword" title="Подтвердите ваш пароль" placeholder="Подтвердите ваш пароль" setState={(e) => setConfirmPassword(e.target.value)} state={confirmpassword} className="mb-4" isImportant={true} />
+        <div className="flex flex-col mb-8 w-2/3">
+          <InputField
+            type="email"
+            name="email"
+            title="Введите ваш email"
+            placeholder="Введите ваш email"
+            setState={(e) => setEmail(e.target.value)}
+            state={email}
+            className="mb-4"
+            isImportant={true}
+          />
+          <InputField
+            type="password"
+            name="password"
+            title="Введите ваш пароль"
+            placeholder="Введите ваш пароль"
+            setState={(e) => setPassword(e.target.value)}
+            state={password}
+            className="mb-4"
+            isImportant={true}
+          />
+          <InputField
+            type="password"
+            name="confirmpassword"
+            title="Подтвердите ваш пароль"
+            placeholder="Подтвердите ваш пароль"
+            setState={(e) => setConfirmPassword(e.target.value)}
+            state={confirmpassword}
+            className="mb-4"
+            isImportant={true}
+          />
         </div>
         <div className="flex flex-col gap-y-2 w-3/5">
-          <CustomButton clickFn={handleLogin} title="Вход" className="bg-[#43BE65] w-full h-10 hover:text-[#43BE65] hover:bg-white border-2"/>
-          <button onClick={() => router.push('/registration')} type="button" className="transition-all duration-300 hover:opacity-60 font-normal text-sm">Нет аккаунта?</button>
+          <CustomButton
+            clickFn={handleLogin}
+            title="Вход"
+            className="bg-[#43BE65] w-full h-10 hover:text-[#43BE65] hover:bg-opacity-90 border-2 hover:bg-white border-transparent transition-all duration-300"
+            bgColor='white'
+          />
+          <button
+            onClick={() => router.push('/registration')}
+            type="button"
+            className="text-sm font-normal text-gray-700 hover:opacity-80 transition-all duration-300"
+          >
+            Нет аккаунта?
+          </button>
         </div>
       </form>
     </div>

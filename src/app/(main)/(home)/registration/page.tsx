@@ -45,9 +45,9 @@ const RegistrationPage = () =>{
 
   return (
     <div className="flex flex-col items-center w-full my-12">
-      <form onSubmit={(e) => handleCreateUser(e)} className="flex flex-col items-center w-1/2 gap-y-12 py-6 px-4 bg-[#dddada] rounded-xl">
+      <form onSubmit={(e) => handleCreateUser(e)} className="flex flex-col items-center w-1/3  gap-y-12 py-6 px-4 bg-[#dddada] rounded-xl">
         <h1 className="font-bold text-3xl leading-10">Регистрация</h1>
-        <div className="flex flex-col mb-24">
+        <div className="flex flex-col mb-24 items-center justify-center w-2/3">
           <InputField type="email" name="email" title="Введите ваш email" placeholder="Введите ваш email" setState={(e) => setEmail(e.target.value)} state={email} className="mb-4" isImportant={true} />
           <InputField type="password" name="password" title="Введите ваш пароль" placeholder="Введите ваш пароль" setState={(e) => setPassword(e.target.value)} state={password} className="mb-4" isImportant={true} />
           <InputField type="password" name="confirmpassword" title="Подтвердите ваш пароль" placeholder="Подтвердите ваш пароль" setState={(e) => setConfirmPassword(e.target.value)} state={confirmPassword} className="mb-4" isImportant={true} />

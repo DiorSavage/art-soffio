@@ -15,7 +15,7 @@ export const CarouselHome = () => {
       {isLoading ? (<div>Загрузка</div>) : isSuccess ? (
         <div className="relative w-full flex flex-col gap-y-12">
           <h1 className="font-semibold text-lg md:text-4xl w-full text-center text-[#555555]">Хит продаж</h1>
-          <Link href='/' className="hidden md:block transition-all duration-300 hover:opacity-60 w-full text-end text-[#555555] font-semibold text-xl pr-6">Смотреть все</Link>
+          <Link href='/catalog' className="hidden md:block transition-all duration-300 hover:opacity-60 w-full text-end text-[#555555] font-semibold text-xl pr-6">Смотреть все</Link>
           <Carousel
             responsive={homeResponsive}
             removeArrowOnDeviceType={['mobile', 'tablet']}
